@@ -16,3 +16,5 @@ func _input(event):
 	if event.is_action_pressed("selected_delete"):
 		# Delete all selected units.
 		get_tree().call_group("selected_nodes", "delete")
+	elif event.is_action_pressed("selected_deselect_all"):
+		get_tree().call_group("selected_nodes", "stop_select")
