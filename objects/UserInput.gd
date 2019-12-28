@@ -12,9 +12,15 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func _input(event):
+func _deselect_all_objects():
+	get_tree().call_group("selected_nodes", "stop_select")
+
+func _unhandled_input(event):
 	if event.is_action_pressed("selected_delete"):
 		# Delete all selected units.
 		get_tree().call_group("selected_nodes", "delete")
 	elif event.is_action_pressed("selected_deselect_all"):
-		get_tree().call_group("selected_nodes", "stop_select")
+		self._deselect_all_objects()
+	elif event.is_action_pressed("object_select"):
+		# We deselect all the objects, then we can see if the ray-tracing hits one.
+		self._deselect_all_objects()

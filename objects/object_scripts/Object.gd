@@ -37,5 +37,7 @@ func delete():
 	self.die()
 
 func _on_SelectionArea_input_event(camera, event, click_position, click_normal, shape_idx):
-	if event.is_action_pressed("unit_select"):
-		start_select()
+	if event.is_action_pressed("object_select"):
+		# Call the selection function deferred. We have to selec ourselves after everything is deselected.
+		# And the deselecting of everything happens deferred as well.
+		self.call_deferred("start_select")
