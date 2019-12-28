@@ -6,7 +6,7 @@
 [node name="World" type="Spatial"]
 
 [node name="Bot" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13148, 0 )
 
 [node name="TerrainTest" type="CSGBox" parent="."]
 width = 10.0
