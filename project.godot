@@ -19,6 +19,10 @@ config/name="BotProgramming"
 run/main_scene="res://worlds/World.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+ProgrammerSystem="*res://singleton/ProgrammerSystem.gd"
+
 [input]
 
 camera_left={

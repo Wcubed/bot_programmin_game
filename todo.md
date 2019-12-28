@@ -1,0 +1,2 @@
+- Decide on a way to program the robots. (text? blocks? tree? nodes?)
+- Implement a grid. (3d? 2d?)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://objects/RTSCameraRig.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/UserInput.tscn" type="PackedScene" id=2]
 [ext_resource path="res://objects/Object.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ui/MainUI.tscn" type="PackedScene" id=4]
 
 [node name="World" type="Spatial"]
 
@@ -24,3 +25,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8076, 0, -1.737 )
 
 [node name="Object3" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.09054, 0, -1.737 )
+
+[node name="MainUI" parent="." instance=ExtResource( 4 )]
