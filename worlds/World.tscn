@@ -1,3 +1,16 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://objects/Bot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/CameraRig.tscn" type="PackedScene" id=2]
 
 [node name="World" type="Spatial"]
+
+[node name="Bot" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+
+[node name="TerrainTest" type="CSGBox" parent="."]
+width = 10.0
+height = 0.01
+depth = 10.0
+
+[node name="CameraRig" parent="." instance=ExtResource( 2 )]
