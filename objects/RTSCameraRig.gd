@@ -41,7 +41,7 @@ func _process(delta):
 	
 	# ---- Camera rotation ----
 	
-	yaw_object.rotate_y(camera_rotation.x * deg2rad(camera_rotation_speed) * delta)
+	yaw_object.rotate_y(-camera_rotation.x * deg2rad(camera_rotation_speed) * delta)
 	pitch_object.rotate_x(-camera_rotation.y * deg2rad(camera_rotation_speed) * delta)
 	
 	# Limit pitch.
