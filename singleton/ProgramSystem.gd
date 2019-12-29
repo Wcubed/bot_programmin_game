@@ -11,13 +11,9 @@ onready var PROGRAM_TEMPLATE := preload("res://program/Program.tscn")
 func _ready():
 	_programs = Node.new()
 	add_child(_programs)
-	
-	# DEBUG:
-	_create_new_program()
-	_create_new_program()
 
 
-func _create_new_program():
+func create_new_program():
 	var program = PROGRAM_TEMPLATE.instance()
 	_programs.add_child(program)
 	

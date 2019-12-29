@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/themes/theme.theme" type="Theme" id=1]
-[ext_resource path="res://ui/ProgramGraphEdit.gd" type="Script" id=2]
-[ext_resource path="res://ui/graph/nodes/Condition.tscn" type="PackedScene" id=3]
-[ext_resource path="res://ui/graph/nodes/Start.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ui/ProgramList.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ui/ProgramGraphEdit.gd" type="Script" id=3]
+[ext_resource path="res://ui/graph/nodes/Condition.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ui/graph/nodes/Start.tscn" type="PackedScene" id=5]
 
 [node name="Programmer" type="PanelContainer"]
 anchor_right = 1.0
@@ -16,11 +17,11 @@ margin_top = 4.0
 margin_right = 1018.0
 margin_bottom = 596.0
 
-[node name="InfoContainer" type="VBoxContainer" parent="HSplitContainer"]
+[node name="ProgramList" parent="HSplitContainer" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_right = 333.0
 margin_bottom = 592.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
 
 [node name="GraphContainer" type="VBoxContainer" parent="HSplitContainer"]
 margin_left = 341.0
@@ -30,10 +31,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 
-[node name="ObjectName" type="Label" parent="HSplitContainer/GraphContainer"]
+[node name="ProgramName" type="Label" parent="HSplitContainer/GraphContainer"]
 margin_right = 671.0
 margin_bottom = 22.0
-text = "Object name"
+text = "Program Name"
 
 [node name="ProgramGraphEdit" type="GraphEdit" parent="HSplitContainer/GraphContainer"]
 margin_top = 26.0
@@ -42,22 +43,22 @@ margin_bottom = 592.0
 size_flags_vertical = 3
 right_disconnects = true
 scroll_offset = Vector2( -502, 0 )
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 
-[node name="Condition" parent="HSplitContainer/GraphContainer/ProgramGraphEdit" instance=ExtResource( 3 )]
+[node name="Condition" parent="HSplitContainer/GraphContainer/ProgramGraphEdit" instance=ExtResource( 4 )]
 margin_left = 502.0
 margin_top = 0.0
 margin_right = -52.0
-margin_bottom = -483.0
+margin_bottom = -466.0
 mouse_filter = 1
 
-[node name="Start" parent="HSplitContainer/GraphContainer/ProgramGraphEdit" instance=ExtResource( 4 )]
+[node name="Start" parent="HSplitContainer/GraphContainer/ProgramGraphEdit" instance=ExtResource( 5 )]
 margin_left = 502.0
 margin_right = -84.0
-margin_bottom = -515.0
+margin_bottom = -498.0
 mouse_filter = 1
 
-[node name="Condition2" parent="HSplitContainer/GraphContainer/ProgramGraphEdit" instance=ExtResource( 3 )]
+[node name="Condition2" parent="HSplitContainer/GraphContainer/ProgramGraphEdit" instance=ExtResource( 4 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 502.0
