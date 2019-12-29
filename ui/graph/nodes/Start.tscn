@@ -1,0 +1,21 @@
+[gd_scene format=2]
+
+[node name="Start" type="GraphNode"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -963.0
+margin_bottom = -557.0
+custom_constants/port_offset = 0
+title = "Start"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 24.0
+margin_right = 45.0
+margin_bottom = 38.0
