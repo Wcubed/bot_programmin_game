@@ -8,9 +8,26 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "Instruction",
+"language": "GDScript",
+"path": "res://program/instructions/Instruction.gd"
+}, {
+"base": "Node",
+"class": "Program",
+"language": "GDScript",
+"path": "res://program/Program.gd"
+}, {
+"base": "Instruction",
+"class": "StartInstruction",
+"language": "GDScript",
+"path": "res://program/instructions/StartInstruction.gd"
+} ]
 _global_script_class_icons={
-
+"Instruction": "",
+"Program": "",
+"StartInstruction": ""
 }
 
 [application]
@@ -21,7 +38,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-ProgrammerSystem="*res://singleton/ProgrammerSystem.gd"
+ProgrammerSystem="*res://singleton/ProgramEditorSystem.gd"
 
 [input]
 

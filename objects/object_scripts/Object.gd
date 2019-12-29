@@ -3,10 +3,10 @@ extends Spatial
 signal object_selected
 signal object_deselected
 
-onready var selection_area = $Selection/SelectionArea
-onready var seleciton_indicator = $Selection/SelectionIndicator
+onready var _selection_area = $Selection/SelectionArea
+onready var _seleciton_indicator = $Selection/SelectionIndicator
 
-var selected := false;
+var _selected := false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,13 +18,13 @@ func _ready():
 
 # Object gets selected.
 func start_select():
-	selected = true
+	_selected = true
 	self.add_to_group("selected_nodes")
 	emit_signal("object_selected")
 
 # Object is no longer selected.
 func stop_select():
-	selected = false
+	_selected = false
 	self.remove_from_group("selected_nodes")
 	emit_signal("object_deselected")
 
