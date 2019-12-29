@@ -17,3 +17,9 @@ margin_bottom = 596.0
 margin_right = 1012.0
 margin_bottom = 22.0
 text = "Object name"
+
+[node name="GraphEdit" type="GraphEdit" parent="VBoxContainer"]
+margin_top = 26.0
+margin_right = 1012.0
+margin_bottom = 592.0
+size_flags_vertical = 3

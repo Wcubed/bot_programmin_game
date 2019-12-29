@@ -67,7 +67,7 @@ func _process(delta):
 	
 	# ---- /Camera zoom ----
 
-func _input(event):
+func _unhandled_input(event):
 	# ---- Camera rotation ----
 	
 	if event.is_action_pressed("camera_rotate"):
